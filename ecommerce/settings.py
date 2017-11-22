@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'accounts',
     'products',
     'cart',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+STRIPE_PUBLISHABLE = os.getenv("STRIPEPUBKY")
+STRIPE_SECRET = os.getenv("STRIPESECKY")
